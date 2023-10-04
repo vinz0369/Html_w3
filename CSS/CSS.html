@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <p>Nguyen Thanh Vinh 2121051481</p>
+<style>
+div {
+  background: rgb(0, 128, 0);
+}
+
+div.first {
+  background: rgba(0, 128, 0, 0.1);
+}
+
+div.second {
+  background: rgba(0, 128, 0, 0.3);
+}
+
+div.third {
+  background: rgba(0, 128, 0, 0.6);
+}
+</style>
+</head>
 <body>
 
-<p>Nguyen Thanh Vinh -2121051481</p>
+<h1>Transparent Boxes 2</h1>
 
-<h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
-<h1 style="background-color:#ff6347;">#ff6347</h1>
-<h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+<p>Result with opacity:</p>
+
+<div style="opacity:0.1;">
+  <h1>10% opacity</h1>
+</div>
+
+<div style="opacity:0.3;">
+  <h1>30% opacity</h1>
+</div>
+
+<div style="opacity:0.6;">
+  <h1>60% opacity</h1>
+</div>
+
+<div>
+  <h1>opacity 1</h1>
+</div>
+
+<p>Result with rgba():</p>
+
+<div class="first">
+  <h1>10% opacity</h1>
+</div>
+
+<div class="second">
+  <h1>30% opacity</h1>
+</div>
+
+<div class="third">
+  <h1>60% opacity</h1>
+</div>
+
+<div>
+  <h1>default</h1>
+</div>
 
 
-<h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
-
-<p>Nguyen Thanh Vinh -2121051481</p>
 </body>
 </html>
 
