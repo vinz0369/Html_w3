@@ -2,21 +2,46 @@
 <html>
 <head>
 <style>
-div.relative {
+.container {
   position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
 }
 </style>
 </head>
 <body>
 
-<h2>NGUYEN THANH VINH MSV 2121051481</h2>
+<h1>NGUYEN THANH VINH 2121051481</h1>
 
-<p>NGUYEN THANH VINH MSV 2121051481</p>
+<p>NGUYEN THANH VINH 2121051481</p>
 
-<div class="relative">
-    NGUYEN THANH VINH MSV 2121051481
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
 </div>
 
 </body>
