@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Nguyen Thanh Vinh 2121051481</h1>
 
-<p>Nguyen Thanh Vinh 2121051481</p>
-<p>Nguyen Thanh Vinh 2121051481</p>
+<h2>Nguyen Thanh Vinh 2121051481</h2>
 
 <p id="demo"></p>
 
 <script>
-x = 5;
-y = 6;
-z = x + y;
-document.getElementById("demo").innerHTML =
-"The value of z is: " + z;
+var  x = 10;
+// Here x is 10
+
+{  
+var x = 2;
+// Here x is 2
+}
+
+// Here x is 2
+document.getElementById("demo").innerHTML = x;
 </script>
 
 </body>
 </html>
-
-
