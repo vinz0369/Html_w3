@@ -1,31 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <title>Form Đăng ký</title>
 </head>
 <body>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Họ và tên :</label>
+        <input type="text" id="name" name="name" required>
+        <br>
 
-    <input type="number" id="number1" placeholder="Nhập số thứ nhất"> <br>
-    <input type="number" id="number2" placeholder="Nhập số thứ hai"> <br>
-    <p id="ketqua">Tổng hai số là :</p>
-    <button onclick="tinhTong()">Tính Tổng</button>
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <label for="nhaplaipassword">Nhập lại mật khẩu:</label>
+        <input type="password" id="nhaplaipassword" name="nhaplaipassword" required>
+        <br>
+
+        <label for="quoctich">Quốc tịch :</label>
+        <select name="quoctich" id="quoctich">
+        <option value="VietNam">VietNam</option>
+        <option value="Laos">Laos</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Thailand">Thailand</option>
+        </select>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="sdt">Số điện thoại:</label>
+        <input type="tel" id="phonenumber" name="phonenumber" required>
+        <br>
+
+        <label for="cauhoi">Câu hỏi bí mật :</label>
+        <select name="cauhoi" id="cauhoi">
+        <option value="1">Cấp một bạn học trường gì?</option>
+        <option value="2">Bạn thích môn thể thao nào?</option>
+        <option value="3">Bạn làm nghề gì?</option>
+        <option value="4">Số điện thoại của bạn là gì?</option>
+        </select>
+        <br>
+
+        <label for="traloi">Câu trả lời</label>
+        <input type="text" id="traloi" name="traloi" required>
+        <br> 
+        <input type="submit" value="Kiểm tra">
+        <input type="submit" value="Đăng ký">
+      
+    </form>
+
     <script>
-      function tinhTong() {
-       
-          var a = parseInt (document.getElementById("number1").value);
-          var b = parseInt (document.getElementById("number2").value);
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var email = document.getElementById("email").value;
 
-          var tong = a + b;
-              
-              document.getElementById("ketqua").innerHTML = "Tổng hai số là: " + tong;
+            if (username.length < 8) {
+                alert("Tên đăng nhập phải có ít nhất 8 ký tự.");
+                return false;
+            }
 
-            
-      }
-  </script>
-  
-  
+            if (password !== confirmPassword) {
+                alert("Mật khẩu và nhập lại mật khẩu không trùng khớp.");
+                return false;
+            }
+
+            if (email.indexOf("@") === -1) {
+                alert("Địa chỉ email phải chứa ký tự '@'.");
+                return false;
+            }
+
+            return true; // Cho phép form được submit nếu tất cả điều kiện đều đúng.
+        }
+    </script>
 </body>
 </html>
