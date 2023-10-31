@@ -1,84 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Form Đăng ký</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thành Vinh</title>
 </head>
+
 <body>
-    <form id="registrationForm" onsubmit="return validateForm()">
-        <label for="username">Họ và tên :</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-
-        <label for="username">Tên đăng nhập:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-
-        <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-
-        <label for="nhaplaipassword">Nhập lại mật khẩu:</label>
-        <input type="password" id="nhaplaipassword" name="nhaplaipassword" required>
-        <br>
-
-        <label for="quoctich">Quốc tịch :</label>
-        <select name="quoctich" id="quoctich">
-        <option value="VietNam">VietNam</option>
-        <option value="Laos">Laos</option>
-        <option value="Cambodia">Cambodia</option>
-        <option value="Thailand">Thailand</option>
-        </select>
-        <br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-
-        <label for="sdt">Số điện thoại:</label>
-        <input type="tel" id="phonenumber" name="phonenumber" required>
-        <br>
-
-        <label for="cauhoi">Câu hỏi bí mật :</label>
-        <select name="cauhoi" id="cauhoi">
-        <option value="1">Cấp một bạn học trường gì?</option>
-        <option value="2">Bạn thích môn thể thao nào?</option>
-        <option value="3">Bạn làm nghề gì?</option>
-        <option value="4">Số điện thoại của bạn là gì?</option>
-        </select>
-        <br>
-
-        <label for="traloi">Câu trả lời</label>
-        <input type="text" id="traloi" name="traloi" required>
-        <br> 
-        <input type="submit" value="Kiểm tra">
-        <input type="submit" value="Đăng ký">
-      
+    <h1> Tasks</h1>
+    <ul id="tasks">
+        <li> Nghe nhạc</li>
+    </ul>
+    <form id="new-task">
+        <input type="text" id="task" autofocus placeholder="New Task">
+        <input type="submit">
     </form>
 
-    <script>
-        function validateForm() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
-            var email = document.getElementById("email").value;
-
-            if (username.length < 8) {
-                alert("Tên đăng nhập phải có ít nhất 8 ký tự.");
-                return false;
-            }
-
-            if (password !== confirmPassword) {
-                alert("Mật khẩu và nhập lại mật khẩu không trùng khớp.");
-                return false;
-            }
-
-            if (email.indexOf("@") === -1) {
-                alert("Địa chỉ email phải chứa ký tự '@'.");
-                return false;
-            }
-
-            return true; // Cho phép form được submit nếu tất cả điều kiện đều đúng.
-        }
-    </script>
 </body>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('#new-task').onsubmit = function(event) {
+        event.preventDefault(); 
+
+        const li = document.createElement('li');
+        li.textContent = document.querySelector('#task').value; 
+        document.querySelector('#tasks').appendChild(li);
+        
+        document.querySelector('#task').value = ''; 
+    };
+});
+</script>
+
 </html>
