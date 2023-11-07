@@ -5,20 +5,33 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    alert("Background color = " + $("p").css("background-color"));
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height();
+    $("#div1").html(txt);
   });
 });
 </script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
 </head>
 <body>
 
-<h2>Nguyen Thanh Vinh 2121051481</h2>
+<div id="div1"></div>
+<br>
 
-<p style="background-color:#ff0000">Nguyen Thanh Vinh 2121051481</p>
-<p style="background-color:#00ff00">Nguyen Thanh Vinh 2121051481</p>
-<p style="background-color:#0000ff">Nguyen Thanh Vinh 2121051481</p>
+<button>Nguyen Thanh Vinh 2121051481</button>
 
-<button>Return background-color of p</button>
+<p>width() - returns the width of an element.</p>
+<p>height() - returns the height of an element.</p>
 
 </body>
 </html>
