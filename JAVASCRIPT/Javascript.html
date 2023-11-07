@@ -1,35 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thành Vinh</title>
-</head>
-
-<body>
-    <h1> Tasks</h1>
-    <ul id="tasks">
-        <li> Nghe nhạc</li>
-    </ul>
-    <form id="new-task">
-        <input type="text" id="task" autofocus placeholder="New Task">
-        <input type="submit">
-    </form>
-
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-   document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('#new-task').onsubmit = function(event) {
-        event.preventDefault(); 
-
-        const li = document.createElement('li');
-        li.textContent = document.querySelector('#task').value; 
-        document.querySelector('#tasks').appendChild(li);
-        
-        document.querySelector('#task').value = ''; 
-    };
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
 });
 </script>
+</head>
+<body>
 
+<p>Nguyen Thanh Vinh 2121051481</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
 </html>
