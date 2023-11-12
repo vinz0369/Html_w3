@@ -33,11 +33,11 @@
     <div class="confirm">
     
         <h2>Xác nhận thông tin</h2>
-        <p>Tên của bạn là: <?php echo $_GET["name"];//ten ?></p>
-        <p>Bạn <?php echo $_GET["age"]; //tuoi?> tuổi</p>
-        <p>Địa chỉ của bạn là: <?php echo $_GET["add"]; //dia chi?></p>
-        <p>Địa chỉ email: <?php echo $_GET["email"]; //email?></p>
-        <p>Số điện thoại: <?php echo $_GET["phonenumber"]; //sodienthoai?></p>
+        <p>Tên của bạn là: <?php echo $_POST["name"];//ten ?></p>
+        <p>Bạn <?php echo $_POST["age"]; //tuoi?> tuổi</p>
+        <p>Địa chỉ của bạn là: <?php echo $_POST["add"]; //dia chi?></p>
+        <p>Địa chỉ email: <?php echo $_POST["email"]; //email?></p>
+        <p>Số điện thoại: <?php echo $_POST["phonenumber"]; //sodienthoai?></p>
     
     </div>
 </body>
