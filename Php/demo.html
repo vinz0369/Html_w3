@@ -4,12 +4,10 @@
         <title></title>
     </head>
     <body>
-        <form action="index.php" method="get"></form>
-        <p>First number:</p>
-        <input type="number" name="firstnumber" > <br>
-        <p>Second number:</p>
-        <input type="number" name="secondnumber"><br>
-        <p></p>
-        <input type="submit" value="add">
+       Result:
+       <?php
+       $result =$_GET["firstNumber"] +  $_GET["secondNumber"];
+       echo $result;
+       ?>
     </body>
 </html>
