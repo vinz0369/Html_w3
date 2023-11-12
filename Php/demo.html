@@ -1,15 +1,28 @@
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-       Result:
-       <?php
-       /*php code starts
-       from here */
-       $result =$_GET["firstNumber"] +  $_GET["secondNumber"];//calculate  the result
-       echo $result; //print result to web screen
-       ?>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <h3>ĐĂNG KÍ THÀNH VIÊN</h3>
+    <form action="index.php" method="get">
+        <p>Họ và tên :</p>
+        <input type="text" name="name"><br>
+        <p>Tuổi :</p>
+        <input type="number" name="age"><br>
+        <p>Địa chỉ :</p>
+        <input type="text" name="add"><br>
+        <p>E-mail:</p>
+        <input type="text" name="email"><br>
+        <p></p>
+        <p>Số điện thoại :</p>
+        <input type="number" name="phonenumber"><br><br>
+        <input type="submit"><br>
+    </form>
+</body>
 </html>
