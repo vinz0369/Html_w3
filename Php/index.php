@@ -1,35 +1,61 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<h1>Du bao trung tuyen</h1>
+	<form method="get">
+		<label for="diemtoan">Điểm toán:</label>
+		<input type="number"  name="diemtoan"><br><br>
+        <label for="diemly">Điểm lý:</label>
+		<input type="number"  name="diemly"><br><br>
+        <label for="diemhoa">Điểm hóa:</label>
+		<input type="number"  name="diemhoa"><br><br>
+	
+		</select><br><br>
+		<input type="submit" value="Kiem tra">
+	</form>
 <?php
-    $USD =23000;
-    $AUD =17000;
-    $JPY =200;
-    $EUR =27000;
-    $amount =$_GET['amount'];
-    if ($_GET["currency"]=="USD")
-    {
-        echo"$amount USD is equal ";
+    $CNTT =18;
+    $CNTTCLC =22;
+    $KHDL =18;
+    $DC =17;
+    $MT = 15;
+    $diemtoan =$_GET['diemtoan'];
+    $diemly =$_GET['diemly'];
+    $diemhoa =$_GET['diemhoa'];
+    $trungbinh = $diemtoan  + $diemly + $diemhoa;
 
-        echo $amount * $USD;
-    
+    if ($trungbinh >=$CNTTCLC)
+    {
+        echo"Ban da trung tuyen nganh CNTT_CLC";
 
     }
-    elseif($_GET["currency"] =="AUD")
+    elseif($trungbinh >= $CNTT)
     {
-        echo"$amount AUD is equal ";
+        echo"Ban da trung tuyen nganh CNTT ";
 
-        echo $amount * $AUD;
     }
-    elseif($_GET["currency"] =="JPY")
+    elseif($trungbinh >= $KHDL)
     {
-        echo"$amount JPY is equal ";
+        echo"Ban da trung tuyen nganh KHDL ";
 
-        echo $amount * $JPY;
+    }
+    elseif($trungbinh >= $DC)
+    {
+        echo"Ban da trung tuyen nganh DIA CHAT ";
+
     }
     else
     {
-        echo"$amount EUR is equal ";
+        echo"Ban da trung tuyen nganh MOI TRUONG ";
 
-        echo $amount *$EUR;
     }
-    echo"VND";
+ 
     ?>
+</body>
+</html>
