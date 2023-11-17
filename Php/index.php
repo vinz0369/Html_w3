@@ -12,7 +12,7 @@
 		<label for="chieucao">Chieu cao:</label>
 		<input type="number"  name="chieucao"><br><br>
         <label for="cannang">Can nang:</label>
-		<input type="number"  name="cannang"><br><br>
+		<input type="number" name="cannang"><br><br>
 		
         <input type="radio" name="gioitinh" value="nam"> Nam
         <input type="radio" name="gioitinh" value="nu"> Nu
@@ -22,20 +22,16 @@
 		<input type="submit" value="Kiem tra">
 	</form>
 <?php
-    $chieucaonam =160;
-    $cannangnam =50;
-    $chieucaonu =150;
-    $cannangnu1 =40;
-    $cannangnu2 = 70;
-    $chieucao =$_GET["chieucao"];
-    $cannang =$_GET["cannang"];
-    $gioitinh =$_GET["gioitinh"];
+    
+    $chieucao =$_GET['chieucao'];
+    $cannang =$_GET['cannang'];
+    $gioitinh =$_GET['gioitinh'];
 
-    if ($gioitinh =="nam" and $cannangnam >= 50 and $chieucaonam >=160 )
+    if ($gioitinh =="nam" and $cannang >= 50 and $chieucao >=160 )
     {
         echo"Ban da dat yeu cau vao cong ty";
     }
-    elseif($gioitinh =="nu" and $cannangnu1 >=40 and $cannangnu2 <=70 and $chieucaonu>=150)
+    elseif($gioitinh =="nu" and $cannang >=40 and $cannang <=70 and $chieucao>=150)
     {
         echo"Ban da dat yeu cau vao cong ty";
     }
