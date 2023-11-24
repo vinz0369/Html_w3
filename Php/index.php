@@ -1,8 +1,6 @@
 <?php
-    $items = array('item2.jpg', 'item3.jpg', 'item4.jpg');
-    foreach ($items as $item)
+    for ($x=1; $x<=10; $x+=+1)
     {
-        echo "<img src ='images/$item' width =50px height = 50px  alt='$item'>";
-    
+        echo" day la so $x <br>";
     }
     ?>
