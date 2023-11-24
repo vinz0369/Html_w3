@@ -3,6 +3,6 @@
     while ($x <=10)
     {
         echo" day la so $x <br>";
-        $x+=+1;
+        
     }
     ?>
