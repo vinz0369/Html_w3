@@ -1,19 +1,12 @@
 <?php
-
-    require('connect.php');
-    mysqli_set_charset($conn, 'UTF-8');
-    $sql = "SELECT * FROM flights";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) 
-    { while ($row = $result->fetch_assoc())
-        { echo "FlightID : ".$row["id"].
-               "Oringin :" .$row["oringin"].
-               "Destination".$row["destination"].
-               "Duration".$row["duration"]."<br>";
-        }
-    }
-    else {
-        echo "không có chuyến bay";
-    }
-    $conn -> close(); 
-    ?>
+// connect to the database
+require 'connect.php';
+mysqli_set_charset($conn, 'UTF8'); // sửa lỗi tiếng việt
+// // Create sql to select data
+$sql="SELECT * FROM flights";
+// run the query and store result to a variable
+$result = $conn->query($sql);
+print_r($result); // In $result
+// close the connection
+$conn->close();
+?>
