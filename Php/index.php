@@ -1,31 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Search Flight</h1>
-    <form method="get" action="" name="register">
-    Origin <input type="text" name="origin" id=""><br>
-    Destination <input type="text" name="destination" id=""><br>
-    <input type="submit" name="" id="" value="Search"><br>
-    </form>
-    <?php
-    if (isset($_GET['origin']))
-    {
-        $origin =$_GET['origin'];
-        $destination =$_GET['destination'];
-        require 'connect.php';
-        mysqli_set_charset($conn, 'UTF8');
-        $sql="SELECT * FORM fights WHERE origin ='$origin' and destination = '$destination'";
-        $result =$conn ->query ($sql);
-        require ('display.php');
-        $conn ->close();
+<?php
+session_start();
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+require('.//admin/db.php');
+
+    // Thực hiện truy vấn để lấy thông tin người dùng
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        // Kiểm tra mật khẩu
+        if (password_verify($password, $row["password"])) {
+            $_SESSION["user_id"] = $row["id"];
+            $_SESSION["user_email"] = $row["email"];
+
+            echo "success";
+        } else {
+            echo "Sai mật khẩu";
+        }
+    } else {
+        echo "Email không tồn tại";
     }
-    ?>
-</body>
-</html>
+    
+
+    // Đóng kết nối
+    $conn->close();
+}
+
+
+?>
