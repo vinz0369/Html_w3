@@ -1,0 +1,303 @@
+/******************* RESET *********************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/******************** MAIN STYLING **************/
+
+html body{
+	font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.7em;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+h1 h2 h3 {
+	padding-bottom: 20px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+/*************** UTILITY CLASSES ************/
+
+.container {
+	margin: auto;
+	max-width: 1100px;
+	overflow: auto;
+	padding: 0 20px;
+}
+
+.text-primary {
+	color: #f7c08a;
+}
+
+.lead {
+	font-size: 20px;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 18px;
+	color: #fff;
+	background: #333;
+	padding: 13px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #f7c08a;
+	color: #333;
+}
+
+.btn-lite{
+	background: #f4f4f4;
+	color: #333;
+}
+
+.bg-dark {
+	background: #333;
+	color: #fff;
+}
+
+.bg-light {
+	background: #f4f4f4;
+	color: #333;
+}
+
+.bg-primary {
+	background: #f7c08a;
+	color: #333;
+}
+
+.clr {
+	clear: both;
+}
+
+/*************** NAVBAR **********************/
+
+#navbar {
+	background: #333;
+	color: #fff;
+	overflow: auto;
+}
+
+#navbar a{
+	color: #fff;
+}
+
+#navbar h1 {
+	float: left;
+	padding-top: 20px;
+}
+
+#navbar ul{
+	list-style: none;
+	float: right;
+}
+
+#navbar ul li{
+	float: left;
+}
+
+#navbar ul li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current{
+	background: #444;
+	color: #f7c08a;
+}
+
+/*************** SHOWCASE ***************/
+
+#showcase {
+	background: url('https://acihome.vn/uploads/15/thiet-ke-khach-san-hien-dai-co-cac-ban-cong-view-bien-sieu-dep-seaside-mirage-hotel-1.JPG') no-repeat center center/cover;
+	height: 600px;
+}
+
+#showcase .showcase-content {
+	color: #ffffff;
+	text-align: center;
+	padding-top: 170px;
+
+}
+
+#showcase .showcase-content h1 {
+	color: aqua;
+	font-size: 60px;
+	line-height: 1.2em;
+	padding-bottom: 15px;
+}
+
+#showcase .showcase-content p {
+	padding-bottom: 20px;
+	line-height: 1.7em;
+}
+
+/********************* HOME INFO *********************/
+
+#home-info {
+	height: 400px;
+}
+
+#home-info .info-img {
+	float: left;
+	width: 50%;
+	background: url('https://dm2304files.storage.live.com/y4pAvlJ5_5jXLMg-55xdKHq0nYDQCJNgLujoSJWF8isQ0VwtWCozuF4zzkx67Dxz0n8RpiUJe2Z5JQ2SWf7GTL3T_Jwqw980mfcttkFSrklIfXUYAFNXi6shQzXXV6Zu20XJmwiVDYoUk0c62tiy4giiSGUc5FzQxo31CHMhUqXGQnIUnv_bY8mXe5aeu42bYxk/photo-1.jpg?psid=1&width=878&height=585') no-repeat;
+	min-height: 100%;
+}
+
+#home-info .info-content {
+	float: right;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	padding: 50px 30px;
+	overflow: hidden;
+}
+
+/************ 2ND SECTION ****************/
+
+.box {
+	float: left;
+	width: 33.3%;
+	padding: 50px;
+	text-align: center;
+}
+
+.box i {
+	margin-bottom: 10px;
+}
+
+#main-footer {
+	text-align: center;
+	background: #444;
+	color: #fff;
+	padding: 20px;
+}
+#paypal-button-container {
+	margin-top: 100px; /* Adjust top margin as needed */
+	text-align: center; /* Center the button */
+}
+body {
+	flex-direction: column;
+	
+	background-color: rgb(255, 255, 255);
+	background-color:  #ffffff!important;
+  }
+  body, .parent-container, .child-container {
+	display: flex;
+  }
+  .parent-container {
+	width: 100%;
+	justify-content: center;
+	gap: 30px 30px;
+  }
+  .child-container {
+	width: 30%;
+	height: auto;
+	gap: 30px 30px;
+	flex-direction: column;
+  }
+  .child-container img {
+	transition: all 1s ease-in-out 0s;
+   box-shadow: 2px 2px 20px gray, inset 2px 2px 10px lightgray;
+  }
+  .child-container img:hover {
+	box-shadow: 4px 4px 25px black, inset 2px 2px 2px 10px rgb(0, 0, 20);
+   
+  }
+  
+  .greeting {
+	text-align: center;
+	color: lightblue;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+  }
+  .fa-brands {
+	font-size: 50px;
+  }
+  .greeting, .fa-brands {
+	text-shadow: 2px 2px 10px lightgray;
+	
+  }
+
+  
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
